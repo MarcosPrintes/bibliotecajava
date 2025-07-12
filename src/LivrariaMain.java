@@ -33,12 +33,19 @@ public class LivrariaMain {
 
         biblioteca.iniciarBiblioteca();
 
-        option = sc.nextInt();
-        boolean continueAction = biblioteca.actions(option);
+        try {
+            option = sc.nextInt();
 
-        if(continueAction) {
+            boolean continueAction = biblioteca.actions(option);
+
+            if(continueAction) {
+                iniciar(biblioteca, cliente);
+            }
+        } catch (Exception e) {
+            System.out.println("Desculpe, mas você precisa escolher uma das opções Abaixo!");
             iniciar(biblioteca, cliente);
         }
+
 
     }
 }

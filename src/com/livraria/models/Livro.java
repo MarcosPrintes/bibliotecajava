@@ -1,7 +1,6 @@
 package com.livraria.models;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Livro {
     private String titulo;
